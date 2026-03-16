@@ -115,8 +115,9 @@
  
     /* ── IMAGE ── */
     .card-img-wrap {
-      height: 195px;
+      height: 420px;
       overflow: hidden;
+      background: #111;
     }
  
     .card-img-wrap img {
@@ -125,6 +126,12 @@
       filter: grayscale(100%) brightness(0.85);
       transition: transform 0.55s ease;
       display: block;
+    }
+ 
+    /* Full-fit for local uploaded images */
+    .card-img-wrap img.full-fit {
+      object-fit: contain;
+      object-position: center;
     }
  
     .card:hover .card-img-wrap img {
@@ -307,7 +314,7 @@
     <!-- BASIC CUT -->
     <div class="card">
       <div class="card-img-wrap">
-        <img src="IMG_0594.PNG" alt="Classic haircut"/>
+        <img src="IMG_0594.PNG" alt="Classic haircut" class="full-fit"/>
       </div>
       <div class="card-body">
         <div class="tier-header">
